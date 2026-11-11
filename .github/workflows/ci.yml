@@ -12,8 +12,8 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v4
 
-            - name: Install compiler
-              run: sudo apt-get update && sudo apt-get install -y g++
+            - name: Check compiler
+              run: g++ --version
 
             - name: Build application
               run: g++ main.cpp -o app
